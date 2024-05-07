@@ -21,4 +21,6 @@ groups <- sapply(groups, function(x) x)
 # combine above variables into list
 inputobject <- lapply(groups,function(x) list(var=vars,elgr=x,des=surveydesign))
 
+tablelist <- lapply(inputobject, table_function )
+do.call(rbind, tablelist)
 
